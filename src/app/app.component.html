@@ -1,0 +1,38 @@
+
+  <!-- Navigation -->
+<app-nav></app-nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+
+        
+        <app-category></app-category>
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+        <router-outlet></router-outlet>
+        <app-table></app-table>
+        <app-slide></app-slide>
+
+        <app-product-list></app-product-list>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <app-footer></app-footer>
+    <!-- /.container -->
+  </footer>

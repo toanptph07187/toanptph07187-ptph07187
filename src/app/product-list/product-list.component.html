@@ -1,0 +1,32 @@
+<!-- <div class="row">
+      <app-product ngClass="col-lg-4 col-md-6 mb-4"></app-product>
+      <app-product ngClass="col-lg-4 col-md-6 mb-4"></app-product>
+      <app-product ngClass="col-lg-4 col-md-6 mb-4"></app-product>
+  </div> -->
+
+
+  <div class ="row">
+<div ngClass="col-lg-4 col-md-6 mb-4" *ngFor= "let item of products">
+    <div class="card h-100">
+        <a href="#"><img class="card-img-top" [src] ="item.img"  alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">{{item.name}}</a>
+          </h4>
+          <h5>${{item.price}}</h5>
+          <p class="card-text">{{item.desc}}</p>
+          <p class="card-text">{{item.status ?"Còn Hàng":"Hết Hàng"}}</p>
+          <button class="btn btn-primary" (click) ="removeItem(item.id)">Xóa</button>
+          <button class="btn btn-primary" (click) ="showDetail(item)">ShowDetail</button>
+        </div>
+        <div class="card-footer">
+          
+          
+        </div>
+      </div>
+      
+</div>
+  <div *ngIf="selected">
+    INPUT -> <app-detail [data]= "selected"></app-detail>
+  </div>
+</div>
