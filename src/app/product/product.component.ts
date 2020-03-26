@@ -11,17 +11,6 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
   }
-  product : Product = {
-    name : "Product Name 1",
-    price : 12.98,
-    desc : "Mô tả thông tin của sản phẩm",
-    img : "http://placehold.it/700x400",
-    status : true
-  }
-  changeStatus(){
-    this.product.status = false;
-  }
-  changeTitle(e){
-    this.product.name = e.target.value;
-  }
+  
+ 
 }

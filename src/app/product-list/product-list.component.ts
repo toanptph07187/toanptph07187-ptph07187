@@ -14,11 +14,13 @@ export class ProductListComponent implements OnInit {
   ) { }
   
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
+    this.getProducts();
   }
 
-  removeItem(id){
-    this.products =  this.productService.removeProduct(id)
+  getProducts(){
+    this.productService.getProducts().subscribe(data => {
+      this.products = data;
+    })
   }
   showDetail(product1){
     this.selected = product1;

@@ -1,10 +1,5 @@
 <form>
     <div class="form-group">
-        <label for="exampleInputEmail1">ID</label>
-        <input type="email" class="form-control" name="id" [(ngModel)]="product.id">
-        <small id="emailHelp" class="form-text text-muted"></small>
-      </div>
-    <div class="form-group">
       <label for="exampleInputEmail1">Name</label>
       <input type="email" class="form-control" name="name" [(ngModel)]="product.name">
       <small id="emailHelp" class="form-text text-muted"></small>
@@ -13,7 +8,14 @@
       <label for="exampleInputPassword1">Price</label>
       <input type="text" class="form-control"name="price" [(ngModel)]="product.price">
     </div>
-    
-    <button type="submit" class="btn btn-primary" (click)="addProduct()">Submit</button>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Mô tả</label>
+      <input type="text" class="form-control"name="desc" [(ngModel)]="product.desc">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Img - https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpuiitCPOr0YSj2eTJfccuhgdVoUmYJBZVh0YhIfNRuTKdHqty</label>
+      <input type="text" class="form-control"name="price" [(ngModel)]="product.img">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addProduct()">Save</button>
     <br>
   </form>
